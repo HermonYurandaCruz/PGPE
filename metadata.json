@@ -1,0 +1,6 @@
+{
+  "name": "Contratus MTL - Gestão de Contratos e Concursos",
+  "description": "Plataforma Integrada de Gestão de Contratos, Concursos Electrónicos e Fiscalização de Projectos do Ministério dos Transportes e Logística de Moçambique (Decreto 79/2022).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import "leaflet/dist/leaflet.css";
+@import "tailwindcss";
+
+:root {
+  /* Contratus Design System Tokens */
+  --canvas-page: #E9E7E2;
+  --canvas-page-alt: #D4D4D4;
+
+  --neutral-0: #FFFFFF;
+  --neutral-25: #FCFCFB;
+  --neutral-50: #F7F7F6;
+  --neutral-100: #F1F1EF;
+  --neutral-150: #EDEDEA;
+  --neutral-200: #E6E5E1;
+  --neutral-300: #D9D8D3;
+  --neutral-400: #B8B7B1;
+  --neutral-500: #8E8D88;
+  --neutral-600: #6B6A66;
+  --neutral-700: #4A4946;
+  --neutral-800: #2B2A28;
+  --neutral-900: #1A1A1A;
+
+  --brand-primary: #1A1A1A;
+  --brand-primary-hover: #2B2A28;
+  --brand-primary-active: #000000;
+  --brand-on-primary: #FFFFFF;
+
+  --semantic-success-fg: #2E9E5B;
+  --semantic-success-bg: #E6F6EC;
+  --semantic-success-border: #BFE6CF;
+  --semantic-success-solid: #34B26A;
+
+  --semantic-danger-fg: #D64545;
+  --semantic-danger-bg: #FDE8E8;
+  --semantic-danger-border: #F6C5C5;
+  --semantic-danger-solid: #E5484D;
+
+  --semantic-warning-fg: #E8920C;
+  --semantic-warning-bg: #FEF3E0;
+  --semantic-warning-border: #F8D9A6;
+  --semantic-warning-solid: #F5A623;
+
+  --semantic-caution-fg: #A67C00;
+  --semantic-caution-bg: #FFF4CC;
+  --semantic-caution-border: #F1DE8F;
+  --semantic-caution-solid: #E8C21A;
+
+  --semantic-info-fg: #3B6FE0;
+  --semantic-info-bg: #E8EEFD;
+  --semantic-info-border: #C5D4F8;
+  --semantic-info-solid: #4C7DF0;
+
+  --semantic-violet-fg: #7B5CD6;
+  --semantic-violet-bg: #EFEAFB;
+  --semantic-violet-border: #D8CCF4;
+  --semantic-violet-solid: #8B6DE3;
+
+  --semantic-pink-fg: #C2417A;
+  --semantic-pink-bg: #FCE7F1;
+  --semantic-pink-border: #F5C6DD;
+  --semantic-pink-solid: #D6558F;
+
+  --semantic-orange-fg: #D9622B;
+  --semantic-orange-bg: #FDEBE1;
+  --semantic-orange-border: #F6CDB7;
+  --semantic-orange-solid: #E8743B;
+
+  --surface-app: #FFFFFF;
+  --surface-sidebar: #F7F7F6;
+  --surface-sidebar-alt: #EFEEEB;
+  --surface-card: #FFFFFF;
+  --surface-card-muted: #F7F7F6;
+  --surface-group: #F3F3F1;
+  --surface-table-header: #F5F5F3;
+  --surface-table-stripe: #F8F8F6;
+  --surface-table-hover: #F5F5F3;
+  --surface-overlay: rgba(26, 26, 26, 0.45);
+  --surface-input: #FFFFFF;
+  --surface-tab-track: #F1F1EF;
+
+  --border-subtle: #EFEFEC;
+  --border-default: #E6E5E1;
+  --border-strong: #D9D8D3;
+
+  --text-primary: #1A1A1A;
+  --text-secondary: #6B6A66;
+  --text-tertiary: #8E8D88;
+  --text-disabled: #B8B7B1;
+  --text-positive: #2E9E5B;
+  --text-negative: #D64545;
+
+  --shadow-xs: 0 1px 2px rgba(26, 26, 26, 0.04);
+  --shadow-sm: 0 1px 3px rgba(26, 26, 26, 0.06), 0 1px 2px rgba(26, 26, 26, 0.04);
+  --shadow-md: 0 4px 12px rgba(26, 26, 26, 0.06), 0 2px 4px rgba(26, 26, 26, 0.04);
+  --shadow-lg: 0 12px 32px rgba(26, 26, 26, 0.10), 0 4px 8px rgba(26, 26, 26, 0.04);
+  --shadow-nav-active: 0 2px 8px rgba(26, 26, 26, 0.06), 0 0 0 1px #E6E5E1;
+  --shadow-app-shell: 0 8px 40px rgba(26, 26, 26, 0.08);
+  --shadow-focus: 0 0 0 3px rgba(26, 26, 26, 0.12);
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-full: 9999px;
+
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--canvas-page);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+.tnum {
+  font-feature-settings: 'tnum' on, 'cv11' on, 'ss01' on;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Material icons alignment */
+mat-icon,
+.mat-icon,
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+}
+
+/* Custom scrollbar for sleek minimal look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--neutral-300);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neutral-500);
+}
+
+/* Printable Certificate styles */
+@media print {
+  body {
+    background: white !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
